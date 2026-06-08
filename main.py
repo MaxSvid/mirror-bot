@@ -1,7 +1,7 @@
 from aiogram import Bot, Dispatcher
 from dotenv import load_dotenv
 
-from bot.replies import router as replies_router
+from bot.backend.replies import router as replies_router
 from bot.handlers import router as main_router
 from bot.config import settings
 
