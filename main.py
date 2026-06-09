@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 from bot.backend.replies import router as replies_router
 from bot.handlers import router as main_router
+from bot.database.table import init_db
 from bot.config import settings
 
 import asyncio
@@ -13,6 +14,7 @@ load_dotenv()
 
 # Polling bot
 async def main() -> None:
+    init_db()
     bot = Bot(token=settings.BOT_TOKEN, parse_mode = "HTML")
     dp = Dispatcher()
 
