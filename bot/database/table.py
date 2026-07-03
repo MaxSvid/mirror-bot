@@ -27,3 +27,14 @@ def init_db():
 if __name__ == "__main__":
     init_db()
     print("Database created")
+
+# idea regarding memory for ai chat bot
+def context_db():
+    with get_connection() as connection:
+        connection.execute("""
+                           CREATE TABLE IF NOT EXIST context_memory(
+                           id 
+                           api_key
+                           message
+                           )
+                           """) 

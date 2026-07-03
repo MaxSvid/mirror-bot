@@ -4,7 +4,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery, Message
 
 import logging
-import bot.keyboard as kyeboard
+import bot.keyboard as keyboard
 
 router = Router()
 

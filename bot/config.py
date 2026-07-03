@@ -8,6 +8,7 @@ load_dotenv()
 class Settings:
     BOT_TOKEN: str = os.getenv("BOT_TOKEN", "")
     OPENROUTER_API_KEY: str = os.getenv("OPENROUTER_API_KEY", "")
+    OPENROUTER_API: str = os.getenv("OPENROUTER_API", "https://openrouter.ai/api/v1")
 
 
 settings = Settings()

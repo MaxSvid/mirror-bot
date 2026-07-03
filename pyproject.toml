@@ -7,5 +7,5 @@ requires-python = ">=3.13"
 dependencies = [
     "aiogram>=3.28.2",
     "dotenv>=0.9.9",
-    "openrouter>=0.9.1",
+    "openai>=2.44.0",
 ]

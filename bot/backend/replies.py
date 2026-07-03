@@ -16,13 +16,6 @@ def load_replies() -> dict:
         print(f"Error: OS error: {e}")
         return {}
 
-# Funny reply on окей message
-@router.message(F.text.lower() == "окей")
-async def reply_okei(message: Message) -> None:
-    replies = load_replies()
-    await message.reply(random.choice(replies["ok_replies"]))
-
-
 # TikTok Links reply
 @router.message(F.text.contains("tiktok.com"))
 async def reply_tiktok(message: Message) -> None:
